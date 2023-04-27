@@ -11,8 +11,7 @@ fetch(url)
     .then((data) => {
 
         function dolar_atual() {
-            // let dolar = parseFloat(data.USDBRL.high);
-            let dolar = 5.2;
+            let dolar = parseFloat(data.USDBRL.high);
             let dolar_formatado = dolar.toFixed(2);
             let partes = dolar_formatado.split(".");
 
@@ -31,6 +30,7 @@ fetch(url)
         let valor_moeda2 = (inputs[0].value * dolar_atual()).toFixed(2);
         let partes = valor_moeda2.split(".");
 
+        // formatando valor para o padrão moeda(1,99)
         if (partes.length === 1) {
             inputs[1].value = partes[0] + ".00";
         } else {
@@ -42,6 +42,7 @@ fetch(url)
             let valor_moeda2 = (inputs[0].value * dolar_atual()).toFixed(2);
             let partes = valor_moeda2.split(".");
 
+            // formatando valor para o padrão moeda(1,99)
             if (partes.length === 1) {
                 inputs[1].value = partes[0] + ".00";
             } else {
@@ -54,6 +55,7 @@ fetch(url)
             let valor_moeda1 = (inputs[1].value / dolar_atual()).toFixed(2);
             let partes = valor_moeda1.split(".");
 
+            // formatando valor para o padrão moeda(1,99)
             if (partes.length === 1) {
                 inputs[0].value = partes[0] + ".00";
             } else {
