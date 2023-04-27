@@ -15,6 +15,7 @@ fetch(url)
             let dolar_formatado = dolar.toFixed(2);
             let partes = dolar_formatado.split(".");
 
+            // formatando valor para o padrão moeda(1,99)
             if (partes.length === 1) {
                 return partes[0] + ".00";
             } else {
