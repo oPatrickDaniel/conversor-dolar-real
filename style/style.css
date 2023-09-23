@@ -7,7 +7,7 @@
 }
 
 :root {
-    --background: #202124;
+    --bg-container: #202124;
     --white: #ffffffec;
     --grey: #ffffff66;
 }
@@ -24,7 +24,7 @@ body {
 }
 
 .container {
-    background-color: var(--background);
+    background-color: var(--bg-container);
     padding: 1em;
     border-radius: 12px;
 }
